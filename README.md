@@ -2,9 +2,22 @@
 
 ## Topics
 [Workshop 1](./docs/workshop_1.md)
+<details>
+    <summary>
+        Workshop 2
+    </summary>
+
+Book Pages: 16 - 32
+- Printing To the terminal `print`
+- Variables
+- Strings
+- Numbers
+- Comments
+</details>
 
 ## Assignments
 - [Assignment 1](https://classroom.github.com/a/zgn-NZiS)
+- [Assignment 2](https://classroom.github.com/a/xtLinLkD)
 
 
 ## Resources
