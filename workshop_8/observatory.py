@@ -60,4 +60,3 @@ with open(f"./workshop_8/{full_name}_{start_date.date()}.csv", "w") as f:
 with open(f"./workshop_8/{full_name}_{start_date.date()}.txt", "w") as f:
     for record in temperatures:
         f.write(f"[{record['date'].date()}] {record['scientist']} | {record['temperature']}\n")
-        

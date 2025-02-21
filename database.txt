@@ -1,0 +1,3 @@
+id,name,balance
+1,Goerge,100.0
+2,Nick,100.0
