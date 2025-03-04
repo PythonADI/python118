@@ -27,3 +27,39 @@ Book Pages: 16 - 32
 ## Resources
 - [Python Book](https://1drv.ms/b/c/8e182a6cb0324966/EWZJMrBsKhgggI5VQgEAAAABLJ8MAd28svlg3TBhDbGtJA?e=aUraJO)
 - [What is Git?](https://www.youtube.com/watch?v=HkdAHXoRtos)
+
+
+
+## Project tips
+
+1. Create Directory
+2. Install virtualenv if you don't have it 
+```bash
+pip install virtualenv
+```
+3. Create a virtual environment 
+```bash
+python -m virtualenv .venv
+```
+4. Activate the virtual environment 
+
+For Mac/Linux
+```bash
+source .venv/bin/activate
+```
+For Windows
+```bash
+.venv\Scripts\activate
+```
+5. Install Django 
+```bash
+pip install django
+```
+6. Create a Django project 
+```bash
+django-admin startproject project_name
+```
+7. Run server 
+```bash
+python manage.py runserver
+```

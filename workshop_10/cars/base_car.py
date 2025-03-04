@@ -1,3 +1,8 @@
+
+class Engine:
+    def start(self):
+        print("Engine is starting")
+
 class Car:
     # Car is a parent class
     def __init__(self, make, model, price):
@@ -9,6 +14,10 @@ class Car:
         self.model = model
         self.price = price
         self.odometer = 0
+        self.engine = Engine()
+
+    def start_engine(self):
+        self.engine.start()
 
     def move(self):
         print(f"{self.make} - {self.model} is moving on ground")

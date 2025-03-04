@@ -1,10 +1,12 @@
 from cars.base_car import Car
 from cars.flying_cars import FlyingCar, SpaceCar, ElectricSpaceCar
 
+# coupling
 my_car = Car("Tesla", "Model 3", 40_000)
 my_car.update_odometer(-500)
 my_car.print_odometer()
 my_car.move()
+my_car.start_engine()
 print(my_car.make)
 print(my_car.model)
 print(my_car.price)
