@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+
+{% block title %}Pottery Sales{% endblock title %}
+
+
+{% block content %}
+<h1>Purchase our great potteries</h1>
+
+<p>
+    Welcome to Pottery Sales. We sell the best potteries in the world.
+</p>
+
+{{ products }}
+
+{% for product in products %}
+
+<div>
+    <h2>{{ product.title }}</h2>
+    <p>{{ product.description }}</p>
+    <p>Price: ${{ product.price }}</p>
+</div>
+{% endfor %}
+{% endblock %}
