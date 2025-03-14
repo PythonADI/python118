@@ -5,22 +5,50 @@
 
 
 {% block content %}
-<h1>Purchase our great potteries</h1>
+{% comment %} <h1>Purchase our great potteries</h1>
 
 <p>
     Welcome to Pottery Sales. We sell the best potteries in the world.
-</p>
+</p> 
 
 {{ products }}
 
-{% for product in products %}
+{% endcomment %}
+<div class="container mt-5 mb-5">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-10">
+            {% for product in products %}
+            <div class="row p-2 bg-white border rounded mb-3">
+                <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="{{ product.thumbnail.url }}"></div>
+                <div class="col-md-6 mt-1">
+                    <h5>{{ product.title }}</h5>
+                    <div class="d-flex flex-row">
+                        <div class="ratings mr-2">
+                            {{ product.rating }}
+                        </div
+                        ><span>({{ product.review_set.count }} Reviews)</span>
+                    </div>
+                    <div class="mt-1 mb-1 spec-1">
+                        {% for tag in product.tags.all %}
+                        <span>{{ tag.name }}</span>
+                        <span class="dot"></span>
+                        {% endfor %}
+                    </div>
 
-<div>
-    <h2><a href="{% url "core:product-details" product.id %}">{{ product.title }}</a></h2>
-    <p>{{ product.description }}</p>
-    <p>Price: ${{ product.price }}</p>
+                    <p class="text-justify text-truncate para mb-0">{{ product.description }}<br><br></p>
+                </div>
+                <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+                    <div class="d-flex flex-row align-items-center">
+                        <h4 class="mr-1">${{ product.price }}</h4><span class="strike-text"></span>
+                    </div>
+                    <h6 class="text-success">Free shipping</h6>
+                    <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2" type="button">Add to wishlist</button></div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 </div>
-{% endfor %}
 
 <div class="pagination">
     <span class="step-links">

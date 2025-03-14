@@ -1,9 +1,9 @@
 from django.contrib import admin
-from core.models import Product
+from core.models import Product, Tag, Review
 
 # Register your models here.
 
-# admin.site.register(Product)
+admin.site.register([Tag, Review])
 
 @admin.register(Product)
 class ProductModelAdmin(admin.ModelAdmin):
